@@ -15,11 +15,11 @@ sap_hostname:
 # url_hcmt: https://softwaredownloads.sap.com/file/0020000000392012021
 #
 # using own accessible storage account:
-url_sapcar: https://stsapbitsgermanywes.blob.core.windows.net/sapbits/SAPCAR_1010-70006178.EXE
-url_hdbserver: https://stsapbitsgermanywes.blob.core.windows.net/sapbits/IMDB_SERVER20_055_0-80002031.SAR
-url_hcmt: https://stsapbitsgermanywes.blob.core.windows.net/sapbits/HCMT_055_0-80003261.SAR
+url_sapcar: https://stdekrasapvm.blob.core.windows.net/sources/SAPCAR_1010-70006178.EXE
+url_hdbserver: https://stdekrasapvm.blob.core.windows.net/sources/IMDB_SERVER20_053_0-80002031.SAR
+url_hcmt: https://stdekrasapvm.blob.core.windows.net/sources/HCMT_055_0-80003261.SAR
 
-url_xsa_media: https://stsapbitsgermanywes.blob.core.windows.net/sapbits/51054859.ZIP
+url_xsa_media: https://stdekrasapvm.blob.core.windows.net/sources/51054859.ZIP
 
 url_cockpit: 
 url_di_core: 
@@ -44,7 +44,7 @@ email_shine: "shinedemo@microsoft.com"
 # ------------------------------------------------------------------------------------------------------------------------
 # -----------------------------URL for the Azure HANA Backint Integration Script------------------------------------------
 # Default:
-url_msawb_plugin: https://aka.ms/ScriptForPermsOnHANA?clcid=0x0409
+url_msawb_plugin: https://stdekrasapvm.blob.core.windows.net/constdekrasapvm/msawb-plugin-config-com-sap-hana.sh
 # using own accessible storage account is required when internet access is blocked, example:
 # url_msawb_plugin: https://<your-own-storage-name>.blob.core.windows.net/sapdeployments/msawb-plugin-config-com-sap-hana.sh
 # ------------------------------------------------------------------------------------------------------------------------

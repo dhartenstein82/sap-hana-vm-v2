@@ -48,8 +48,8 @@ $CONTAINER2="VMAppContainer;Compute;$VMRG;$VM"
 $ITEMSYS="saphanadatabase;$SID;systemdb"
 $ITEMTEN="saphanadatabase;$SID;$SID"
 $pol=$POL.ToLower()
-$OSPOL="pol-sapos-$pol"
-$HANAPOL="pol-saphana-$pol"
+$OSPOL="SAP-$pol"
+$HANAPOL="SAP-HANA-$pol"
 
 Write-Host "-----------------------------------------------------"
 Write-Host "-----------Get VM ID---------------------------------" 
