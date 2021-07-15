@@ -28,9 +28,7 @@ parameters:
   values:
   - "RHEL 7.7"
   - "RHEL 8.1"
-  - "SLES 12 SP4"
-  - "SLES 12 SP5"
-  - "SLES 15 SP2"
+  - "DEKRA RHEL 8.1"
 
 - name: sid
   displayName: HANA System ID
@@ -45,12 +43,12 @@ parameters:
 - name: vmname
   displayName: HANA VM Name in Azure
   type: string
-  default: "HANATEST"
+  default: "ulhna"
 
 - name: hostname
   displayName: HANA Host Name in the OS
   type: string
-  default: "hanatest"
+  default: "ulhna"
 
 - name: location
   displayName: Target Region
@@ -74,9 +72,9 @@ parameters:
   # "<VNET>/subnets/<subnet>"
 
 - name: availzone
-  displayName: Availability Zone
+  displayName: Availability Zone (1 Non-PROD , 2 PROD)
   type: number
-  default: 0
+  default: 1
   values:
   - 0
   - 1
@@ -125,11 +123,6 @@ parameters:
 
 - name: hcmt
   displayName: HANA performance checks
-  type: boolean
-  default: False
-
-- name: cleanup
-  displayName: Remove everything at the end
   type: boolean
   default: False
 
