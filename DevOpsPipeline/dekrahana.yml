@@ -40,6 +40,11 @@ parameters:
   type: string
   default: "00"
 
+- name: resourcegroup
+  displayName: Resource Group
+  type: string
+  default: "rg-vm-[servername]-gwc"
+
 - name: vmname
   displayName: HANA VM Name in Azure
   type: string
@@ -70,6 +75,7 @@ parameters:
   - "vnet-sap-shared-gwc/subnets/snet-dmz-prod-gwc-001"
      # Adapt according to your target landing zone
   # "<VNET>/subnets/<subnet>"
+  
 
 - name: availzone
   displayName: Availability Zone (1 Non-PROD , 2 PROD)
@@ -136,7 +142,7 @@ variables:
   backuptype: ${{ parameters.hanabackupsetup }}
   backuptodo: $[ ne(variables['backuptype'], 'None') ]
   hanadbinst: ${{ parameters.hanadbinstallation }}
-  hanavmrg: RG-HANA-${{ parameters.sid }}
+  hanavmrg: ${{ parameters.resourcegroup }}
   hanavmfqdn: ${{ parameters.hostname }}.$(privatednszone)
   containersuffix: "$(hanavmrg);${{ parameters.vmname }}"
   hanabackupcontainer: "VMAppContainer;Compute;$(containersuffix)"
